@@ -1,1 +1,7 @@
-<Solution />
+<Solution>
+  <Project Path="src/BuildingBlocks/Common/Common.csproj" Id="96e6249f-87e2-4ec2-aeb2-f8b72c82dac9" />
+  <Project Path="src/BuildingBlocks/Contracts/Contracts.csproj" Id="8798f4cc-cb03-4652-8554-d4bf722fdc6f" />
+  <Project Path="src/BuildingBlocks/EventBus/EventBus.Abstractions/EventBus.Abstractions.csproj" />
+  <Project Path="src/BuildingBlocks/EventBus/EventBus.RabbitMQ/EventBus.RabbitMQ.csproj" Id="03397bcd-9191-47f2-ad66-630408233f1b" />
+  <Project Path="src/BuildingBlocks/Persistence/Persistence.csproj" Id="29cb42bc-05c9-4240-a998-129bba0e1562" />
+</Solution>
