@@ -12,8 +12,10 @@
   <Folder Name="/src/Services/" />
   <Folder Name="/src/Services/BorrowingPowerService/">
     <Project Path="src/Services/BorrowingPowerService/BorrowingPowerService.Application/BorrowingPowerService.Application.csproj" Id="2f289c59-2a4e-478e-a387-2ee607adbdab" />
+    <Project Path="src/Services/BorrowingPowerService/BorrowingPowerService.DI/BorrowingPowerService.DI.csproj" Id="12862d42-33c8-4e31-9b3e-ad86320f35a7" />
     <Project Path="src/Services/BorrowingPowerService/BorrowingPowerService.Domain/BorrowingPowerService.Domain.csproj" Id="dfa4a8de-cbed-4f74-8510-3c70a4a48ace" />
     <Project Path="src/Services/BorrowingPowerService/BorrowingPowerService.Infrastructure/BorrowingPowerService.Infrastructure.csproj" Id="e44d4b37-2772-4d2d-a70c-7da3b4312672" />
+    <Project Path="src/Services/BorrowingPowerService/BorrowingPowerService.Worker/BorrowingPowerService.Worker.csproj" Id="ee140ae1-9ffe-4e1b-b9bc-0e66f260aef2" />
   </Folder>
   <Folder Name="/src/Services/CreditCheckService/">
     <Project Path="src/Services/CreditCheckService/CreditCheckService.Application/CreditCheckService.Application.csproj" />
