@@ -1,7 +1,25 @@
 <Solution>
-  <Project Path="src/BuildingBlocks/Common/Common.csproj" Id="96e6249f-87e2-4ec2-aeb2-f8b72c82dac9" />
-  <Project Path="src/BuildingBlocks/Contracts/Contracts.csproj" Id="8798f4cc-cb03-4652-8554-d4bf722fdc6f" />
-  <Project Path="src/BuildingBlocks/EventBus/EventBus.Abstractions/EventBus.Abstractions.csproj" />
-  <Project Path="src/BuildingBlocks/EventBus/EventBus.RabbitMQ/EventBus.RabbitMQ.csproj" Id="03397bcd-9191-47f2-ad66-630408233f1b" />
-  <Project Path="src/BuildingBlocks/Persistence/Persistence.csproj" Id="29cb42bc-05c9-4240-a998-129bba0e1562" />
+  <Folder Name="/src/" />
+  <Folder Name="/src/BuildingBlocks/">
+    <Project Path="src/BuildingBlocks/Common/Common.csproj" />
+    <Project Path="src/BuildingBlocks/Contracts/Contracts.csproj" />
+    <Project Path="src/BuildingBlocks/Persistence/Persistence.csproj" />
+  </Folder>
+  <Folder Name="/src/BuildingBlocks/EventBus/">
+    <Project Path="src/BuildingBlocks/EventBus/EventBus.Abstractions/EventBus.Abstractions.csproj" />
+    <Project Path="src/BuildingBlocks/EventBus/EventBus.RabbitMQ/EventBus.RabbitMQ.csproj" />
+  </Folder>
+  <Folder Name="/src/Services/" />
+  <Folder Name="/src/Services/BorrowingPowerService/">
+    <Project Path="src/Services/BorrowingPowerService/BorrowingPowerService.Application/BorrowingPowerService.Application.csproj" Id="2f289c59-2a4e-478e-a387-2ee607adbdab" />
+    <Project Path="src/Services/BorrowingPowerService/BorrowingPowerService.Domain/BorrowingPowerService.Domain.csproj" Id="dfa4a8de-cbed-4f74-8510-3c70a4a48ace" />
+    <Project Path="src/Services/BorrowingPowerService/BorrowingPowerService.Infrastructure/BorrowingPowerService.Infrastructure.csproj" Id="e44d4b37-2772-4d2d-a70c-7da3b4312672" />
+  </Folder>
+  <Folder Name="/src/Services/CreditCheckService/">
+    <Project Path="src/Services/CreditCheckService/CreditCheckService.Application/CreditCheckService.Application.csproj" />
+    <Project Path="src/Services/CreditCheckService/CreditCheckService.DI/CreditCheckService.DI.csproj" Id="c07392ea-1a0a-4d7c-b809-2438ddfb3261" />
+    <Project Path="src/Services/CreditCheckService/CreditCheckService.Domain/CreditCheckService.Domain.csproj" />
+    <Project Path="src/Services/CreditCheckService/CreditCheckService.Infrastructure/CreditCheckService.Infrastructure.csproj" />
+    <Project Path="src/Services/CreditCheckService/CreditCheckService.Worker/CreditCheckService.Worker.csproj" />
+  </Folder>
 </Solution>
