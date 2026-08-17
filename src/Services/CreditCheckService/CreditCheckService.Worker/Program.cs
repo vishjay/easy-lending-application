@@ -1,12 +1,14 @@
+using CreditCheckService.Application.Commands;
 using CreditCheckService.DI;
 using CreditCheckService.Worker;
 //using EventBus.RabbitMQ;
 using MassTransit;
+using Microsoft.EntityFrameworkCore;
 
 var builder = Host.CreateApplicationBuilder(args);
 
 builder.Services.AddMediatR(cfg =>
-    cfg.RegisterServicesFromAssembly(typeof(KycSubmittedConsumer).Assembly));
+    cfg.RegisterServicesFromAssembly(typeof(PerformCreditCheckCommand).Assembly));
 
 builder.Services.AddInfrastructure(builder.Configuration);
 
@@ -16,17 +18,30 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 //    x.UsingRabbitMq((context, cfg) =>
 //    {
-//        cfg.Host("localhost");
-
-//        cfg.ReceiveEndpoint("kyc-submitted-queue", e =>
+//        cfg.Host(
+//        builder.Configuration["RabbitMQ:Host"]
+//            ?? "localhost",
+//        h =>
 //        {
-//            e.ConfigureConsumer<KycSubmittedConsumer>(context);
+//            h.Username(
+//                builder.Configuration["RabbitMQ:Username"]
+//                ?? "guest");
+
+//            h.Password(
+//                builder.Configuration["RabbitMQ:Password"]
+//                ?? "guest");
 //        });
+
+//        // KYC submitted
+//        cfg.ReceiveEndpoint(
+//            "creditcheck-kyc-submitted",
+//            e =>
+//            {
+//                e.ConfigureConsumer<KycSubmittedConsumer>(
+//                    context);
+//            });
 //    });
 //});
-
-//builder.Services.AddScoped<EventBus.Abstractions.IEventBus,
-//    EventBus.RabbitMQ.RabbitMqEventBus>();
 
 //builder.Services.AddHostedService<Worker>();
 

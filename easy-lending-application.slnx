@@ -24,4 +24,12 @@
     <Project Path="src/Services/CreditCheckService/CreditCheckService.Infrastructure/CreditCheckService.Infrastructure.csproj" />
     <Project Path="src/Services/CreditCheckService/CreditCheckService.Worker/CreditCheckService.Worker.csproj" />
   </Folder>
+  <Folder Name="/src/Services/ReadModelService/">
+    <Project Path="src/Services/ReadModelService/ReadModelService.API/ReadModelService.API.csproj" Id="c492be05-faac-42f5-9604-47896dd5c207" />
+    <Project Path="src/Services/ReadModelService/ReadModelService.Application/ReadModelService.Application.csproj" Id="8aae2f95-37db-419b-922b-112470d0f05e" />
+    <Project Path="src/Services/ReadModelService/ReadModelService.DI/ReadModelService.DI.csproj" Id="66ebfb95-7541-4cff-bf6b-b97216cb877e" />
+    <Project Path="src/Services/ReadModelService/ReadModelService.Domain/ReadModelService.Domain.csproj" Id="c43d10af-bac4-482a-ac8e-d1e51386703a" />
+    <Project Path="src/Services/ReadModelService/ReadModelService.Infrastructure/ReadModelService.Infrastructure.csproj" Id="144668db-7859-4aaf-91a6-7779aa26b0fc" />
+    <Project Path="src/Services/ReadModelService/ReadModelService.Worker/ReadModelService.Worker.csproj" Id="b8b46f6d-19c3-444b-a2d1-6c578eb27ad7" />
+  </Folder>
 </Solution>

@@ -4,7 +4,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>dotnet-CreditCheckService.Worker-0684921b-d058-4b73-92e4-4bb352c27784</UserSecretsId>
+    <UserSecretsId>dotnet-ReadModelService.Worker-4416e0da-7d80-4aa7-9137-c3468f697dd9</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\BuildingBlocks\Contracts\Contracts.csproj" />
     <ProjectReference Include="..\..\..\BuildingBlocks\EventBus\EventBus.Abstractions\EventBus.Abstractions.csproj" />
-    <ProjectReference Include="..\CreditCheckService.Application\CreditCheckService.Application.csproj" />
-    <ProjectReference Include="..\CreditCheckService.DI\CreditCheckService.DI.csproj" />
+    <ProjectReference Include="..\ReadModelService.Application\ReadModelService.Application.csproj" />
+    <ProjectReference Include="..\ReadModelService.DI\ReadModelService.DI.csproj" />
   </ItemGroup>
 </Project>

@@ -1,11 +1,13 @@
+using BorrowingPowerService.Application.Commands;
 using BorrowingPowerService.DI;
 using BorrowingPowerService.Worker;
+using MassTransit;
 
 var builder = Host.CreateApplicationBuilder(args);
-//builder.Services.AddHostedService<Worker>();
+
 
 builder.Services.AddMediatR(cfg =>
-    cfg.RegisterServicesFromAssembly(typeof(CreditCheckCompletedConsumer).Assembly));
+    cfg.RegisterServicesFromAssembly(typeof(CalculateBorrowingCommand).Assembly));
 
 builder.Services.AddInfrastructure(builder.Configuration);
 
@@ -15,17 +17,32 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 //    x.UsingRabbitMq((context, cfg) =>
 //    {
-//        cfg.Host("localhost");
-
-//        cfg.ReceiveEndpoint("credit-check-completed-queue", e =>
+//        cfg.Host(
+//        builder.Configuration["RabbitMQ:Host"]
+//            ?? "localhost",
+//        h =>
 //        {
-//            e.ConfigureConsumer<CreditCheckCompletedConsumer>(context);
+//            h.Username(
+//                builder.Configuration["RabbitMQ:Username"]
+//                ?? "guest");
+
+//            h.Password(
+//                builder.Configuration["RabbitMQ:Password"]
+//                ?? "guest");
 //        });
+
+//        // credit check completed
+//        cfg.ReceiveEndpoint(
+//            "borrowingpower-credit-check-completed",
+//            e =>
+//            {
+//                e.ConfigureConsumer<CreditCheckCompletedConsumer>(
+//                    context);
+//            });
 //    });
 //});
 
-//builder.Services.AddScoped<EventBus.Abstractions.IEventBus,
-//    EventBus.RabbitMQ.RabbitMqEventBus>();
+//builder.Services.AddHostedService<Worker>();
 
 var host = builder.Build();
 host.Run();
